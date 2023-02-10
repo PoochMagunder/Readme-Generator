@@ -12,16 +12,19 @@
 This command-line application allows the user to dynamically generate a professional README.md.
 
 ## Installation
-After cloning this project type: npm install in the terminal to install this project.
+After cloning this project type: npm install in the terminal to install the project.
 
 ## Usage
-To run this application type: node index.js in the command-line.
+To run the application from the command-line type: node index.js.
+
+## Video Walk-through
+<link src="Readme-Generator Video.mkv">
 
 ## Contributions
 Please contribute to this project!
 
 ## Tests
-No test provided in this project.
+No tests were provided with this project.
 
 
 ## License
