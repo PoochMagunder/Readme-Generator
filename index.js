@@ -1,9 +1,10 @@
-// TODO: Include packages needed for this application
+// Required Libraries
 const inquirer = require("inquirer");
 const fs = require("fs");
 const markDown = require("./utils/generateMarkdown.js");
 const licenses = ["None", "BSD", "GPL", "MIT", "Apache"];
-// TODO: Create an array of questions for user input
+
+// Prompted Questions
 const questions = [
   {
     type: "input",
@@ -52,7 +53,7 @@ const questions = [
     name: "email",
   },
 ];
-// TODO: Create a function to write README file
+// Function that writes to the file
 function writeToFile(data) {
   const filename = "README.md";
 
@@ -61,11 +62,10 @@ function writeToFile(data) {
   });
 }
 
-// TODO: Create a function to initialize app
+// Function that runs on start
 function init() {
   inquirer.prompt(questions).then((answers) => writeToFile(markDown(answers)));
  
 }
 
-// Function call to initialize app
 init();

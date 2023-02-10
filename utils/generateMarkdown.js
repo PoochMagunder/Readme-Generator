@@ -1,6 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-
+// Renders License Badge
 function renderLicenseBadge(license) {
   let badge = "";
 
@@ -13,41 +11,14 @@ function renderLicenseBadge(license) {
 
   return badge;
 }
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// Renders License Link
 function renderLicenseLink(license) {
-
-  if (license !== 'None') {
-    return `* [License](#license)`
+  if (license !== "None") {
+    return `* [License](#license)`;
   }
-  return ''
-
-  // let licenseLink;
-
-  // switch (license) {
-  //   case "MIT":
-  //     licenseLink = "https://mit-license.org/";
-  //     break;
-  //   case "BSD":
-  //     licenseLink = "https://opensource.org/licenses/BSD-3-Clause";
-  //     break;
-  //   case "GPL":
-  //     licenseLink = "https://www.gnu.org/licenses/gpl-3.0.en.html";
-  //     break;
-  //   case "Apache":
-  //     licenseLink = "https://www.apache.org/licenses/LICENSE-2.0.html";
-  //     break;
-  //   default:
-  //     licenseLink = "";
-  //     break;
-  // }
-
-  // return licenseLink;
+  return "";
 }
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// Renders License Section
 function renderLicenseSection(license) {
   let licenseSection = "";
 
@@ -61,8 +32,7 @@ function renderLicenseSection(license) {
 
   return licenseSection;
 }
-
-// TODO: Create a function to generate markdown for README
+// Creates the Markdown File
 function createMarkDown(data) {
   return `# ${data.title}
 ## Table of Contents
@@ -96,10 +66,7 @@ ${renderLicenseBadge(data.license)}
 ## Questions
 ${data.github}
 ${data.email}
-`
-
-
-
+`;
 
   // const sections = [
   //   "Description",
@@ -133,7 +100,6 @@ ${data.email}
   // // add description
   // markdown += "## " + sections[0] + "\n";
   // markdown += data.description + "\n";
-  
 
   // // add installation
   // markdown += "## " + sections[1] + "\n";
@@ -163,6 +129,6 @@ ${data.email}
   // markdown +=
   //   "You can email me at " + data.email + " with any additional questions.\n";
   // return markdown;
- }
+}
 
 module.exports = createMarkDown;
